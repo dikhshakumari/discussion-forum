@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Portal</title>
+    <link rel="stylesheet" href="discussion.css">
+</head>
+<body>
+    <div class="top-bar">Discussion Portal</div>
+    
+    <div class="container">
+        <!-- Left Pane (Questions List) -->
+        <div class="left-pane">
+            <h3>Questions</h3>
+            <ul id="questions-list">
+                <!-- Questions will be dynamically added here -->
+            </ul>
+        </div>
+
+        <!-- Right Pane (Question Form and Responses) -->
+        <div class="right-pane">
+            <h2>Welcome to Discussion Portal</h2>
+            <p>Enter subject and question:</p>
+
+            <form id="question-form">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required><br>
+                <br>
+                <label for="question">Question:</label>
+                <textarea id="question" name="question" required></textarea><br>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Question Display and Response Form will dynamically appear here -->
+            <div id="question-display" style="display: none;">
+                
+                <h2 id="display-question"></h2>
+                <p id="display-subject"></p>
+
+                <h3>Responses:</h3>
+                <ul id="responses-list">
+                    <!-- Responses will be dynamically added here -->
+                </ul>
+
+                <h3>Post a Response</h3>
+                <form id="response-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required><br>
+
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" required></textarea><br>
+
+                    <button type="submit">Submit Response</button>
+                </form>
+
+                <button id="resolve-btn">Resolve</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="discussion.js"></script>
+</body>
+</html>
